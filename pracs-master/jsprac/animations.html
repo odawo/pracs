@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js trials</title>
+
+	<script type="text/javascript">
+
+		var imgObject = null;
+		var btnObj;
+		var animate;
+
+		function init() {
+			// body...
+			imgObject = document.getElementById('myImage');
+			imgObject.style.position = 'relative';
+			imgObject.style.left = '50px';
+
+			btnObj = document.getElementById('myBtn');
+			btnObj.style.position = 'absolute';
+		}
+
+		function mvImgRight() {
+			// body...
+			imgObject.style.left = parseInt(imgObject.style.left) + 10 + 'px';
+			btnObj.style.color = 'green';
+			btnObj.style.border = '5px';
+			animate = setTimeout(mvImgRight, 20); //call mvImgRight in 20sec
+		}
+
+		function stop() {
+			// body...
+			clearTimeout(animate);
+			imgObject.style.left = '0px';
+		}
+
+		window.onload = init;
+	</script>
+</head>
+<body>
+	<form>
+		<img id="myImage" src="image.jpg">
+			<input id="myBtn" type="button" value="click" onclick="mvImgRight()">
+		</img>
+	</form>
+
+	
+
+</body>
+</html>

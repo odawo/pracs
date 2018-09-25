@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js practicals</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// function newFunction() {
+			// body...
+			var count = 10;
+			do{
+				document.write("count : " + count + "</br>")
+				count++;
+			}
+			while(count < 15);
+
+			document.write("<br/>");
+			document.write("<br/>");
+
+
+		// <!-- } -->
+
+/***
+
+loops
+
+
+**/
+		// for loop
+		var i;
+		for(i = 0; i<10; i++){
+			document.write("i = " + i);
+			document.write("<br/>");
+			document.write("<br/>");
+		}
+
+		// for .. in loop
+				// for(variablename in object) {
+				// 	// your code
+				// }
+		var aValue;
+		document.write("navigator object properties <br/>");
+		for(aProperty in navigator) {
+			document.write(aProperty);
+			document.write("<br/>");
+
+		}
+
+		// break,.. continue
+		var j = 0;
+		while(j<10) {
+			j++;
+			if (j == 4) {
+				document.write("continue skips value 4<br/>");
+				continue;
+			} else if (j == 6) {
+				document.write("break cuts at value 6<br/>");
+				break;
+			}
+			document.write(j + "<br/>");
+		}
+		document.write("loop exit. ")
+
+
+		// for loops with labels
+		// outerloop: //label
+		// for (var k = 0 k < 5; k++) {
+		// 	document.write("outerloop :" + k + "<br/>");
+		// 	innerloop:
+		// 	for (var l = 0; l<5; l++) {
+		// 		if (l > 3) {break;} //quit inner loop
+		// 		if (k == 2) {break innerloop;} //quit inner loop
+		// 		if (k == 4) {break outerloop;} //quit outer loop
+		// 		document.write("innerloop : " + l + "<br/>");
+		// 	}
+		// }
+
+			document.write("<br/>");
+			document.write("<br/>");
+
+
+/** 
+
+functions
+
+*/
+
+		function myFunction(name, age) {
+
+			document.write("name : " + name + " , age : " + age);
+		}
+
+		// nested functions
+		function myFunctiona(a, b) {
+			function square(x) {
+				// body...
+				return x*x; 
+			}
+			return Math.sqrt(square(a) + square(b));
+		}
+
+		function myFunctionb() {
+			// body...
+			var result;
+			result = hypotenuse(1,2);
+			document.write(result);
+		}
+
+
+/**
+
+cookies
+
+**/
+
+		function writeCookie() {
+			// body...
+			if(document.myform.customer.value == "") {
+				alert("insert a value");
+				return;
+			}
+			cookievalue = escape(document.myform.customer.value) + ";";
+			document.cookie = "name = " + cookievalue;
+			document.write("setting cookies : " + "name = " + cookievalue);
+		}
+
+
+		function readCookie() {
+			// body...
+			var allcookies = document.cookie;
+			document.write("all cookies : " + allcookies);
+
+			// cookies in array
+			cookiearray = allcookies.split(';');
+			// key value pairs from array
+			for (var i = 0; i < cookiearray.length; i++) {
+				name = cookiearray[i].split('=')[0];
+				value = cookiearray[i].split('=')[1];
+				document.write("key : " + name + "value : " + value);
+			}
+
+		}
+
+/**
+page redirection
+*/
+
+		function redirectPage() {
+			// body...
+			window.location = "www.google.com";
+		}
+
+/*
+dialog boxes ... alerts & .. prompts & ...
+*/
+
+		function getConf() {
+			// body...
+			var retVal = confirm("continue?");
+			if (retVal == true) {
+				document.write("clicked yes");
+				return true;
+			} else {
+				document.write("clicked no/cancel");
+				return false;
+			}
+		}
+
+		// prompt
+		function getValue() {
+			// body...
+			var retVal2 = prompt("name :");
+			document.write("input was : " + retVal2);
+		}
+
+
+	</script>
+
+	<input type="button" onclick="myFunction('van', 20)", value="click me"/>
+
+	<input type="button" onclick="myFunctiona(a,b)", value="click me 2"/>
+
+	<input type="button" onclick="myFunctionb()", value="click me 3"/>
+
+	<form name="myform" action="">
+		<label>enter name : </label>
+		<input type="text" name="customer">
+
+		<input type="button" value="set cookie" onclick="writeCookie()"/>
+
+		<input type="button" value="get cookie" onclick="readCookie()"/>
+
+	</form>
+
+	<input type="button" onclick="redirectPage()" value="redirectn"/>
+
+	<form>
+		<input type="button" value="prompt dialog"  onclick="getConf()"/>
+	</form>
+
+	<form>
+		<input type="button" value="prompt dialog 2"  onclick="getValue()"/>
+	</form>
+
+</body>
+</html>

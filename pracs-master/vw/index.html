@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.js</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+// say hey button fun
+		// function sayHello() {
+		// 	alert("hey");
+		// }
+
+		// variables
+		var a = 2, b = 3, c = "Test", linebreak="<br/>";
+		
+		document.write("(a & b) => ");
+		result = a & b;
+		document.write(result);
+		document.write(linebreak);
+
+		document.write("(a | b) => ");
+		result = a | b;
+		document.write(result);
+		document.write(linebreak);
+
+		document.write("(a^b)=>");
+		result = a^=b;
+		document.write(result);
+		document.write(linebreak);
+
+		document.write("(~b) => ");
+		result = ~b
+		document.write(result);
+		document.write(linebreak);
+
+		// conditional
+		var c = 5, d = "String", linebreak="<br/>";
+		
+		result = (typeof c == "string"? "b is a string" : "b is numeric") ;
+		document.write("result => ");
+		document.write(result);
+		document.write(linebreak);
+
+		result = (typeof d == "string" ? "a is a string" : "a is numeric") ;
+		document.write("result => ");
+		document.write(result);
+		document.write(linebreak);
+
+		// if statement.. conditions
+		var age = 4;
+		if (age < 3) {
+			document.write("lower");
+		} else {
+			document.write("more");
+		}
+
+		// switch case
+		var grade='A';
+            document.write("Entering switch block<br />");
+            switch (grade)
+            {
+               case 'A': document.write("Good job<br />");
+               case 'B': document.write("Pretty good<br />");
+               case 'C': document.write("Passed<br />");
+               case 'D': document.write("Not so good<br />");
+               case 'F': document.write("Failed<br />");
+               default: document.write("Unknown grade<br />")
+            }
+            document.write("Exiting switch block");
+
+            // do .. while
+            var count = 0;
+            while(count<10){
+            	 document.write("Current Count : " + count + "<br />");
+               count++;
+            }
+
+            // or
+             var count = 0;
+            do{
+
+            	 document.write("Current Count : " + count + "<br />");
+               count++;
+            } while(count < 5);
+
+            // void keyword
+            void function fName() {
+            	// ...
+            }
+            
+        /*
+
+         objects..instances..constructors.
+       */
+
+            var obj = new Object(); //instance of an object
+            obj.subject = "sth"; //assign property to obj
+            obj.author = "sth else"; //  ""
+
+            document.write("subject :" + obj.subject);
+            document.write("author :" + obj.author);
+
+            //  ..... constructor assigns properties
+            function obj(title, pages) {
+            	// body...
+            	this.title = title;
+            	this.pages = pages;
+            }
+
+            var myobj = new book("titleval", 30);
+            document.write("title : " + myobj.title);
+            document.write("pages : " + myobj.pages);
+
+            // function till work as a method
+            function addPrice(amount) {
+            	// body...
+            	this.price = amount;
+            }
+
+            function obj(title, author) {
+            	// body...
+            	this.title = title;
+            	this.author = author;
+            	this.addPrice = addPrice; //assign method as property
+
+            	var myBook = new book("sth", "sth");
+            	myBook.addPrice(100);
+
+            	document.write("price : " + myBook.price);
+            }
+
+            // using with keyword
+            function addPrice(amount) {
+            	// body...
+            	with(this) {
+            		price = amount;
+            	}
+            }
+
+            function obj(title, author) {
+            	// body...
+            	this.title = title;
+            	this.author = author;
+            	this.price = 0;
+            	this.addPrice = addPrice; //assign method as property
+
+
+            	var myBook = new book("sth", "sth else");
+            	myBook.addPrice(100);
+
+            	document.write("book price : " + myBook.price);
+            }
+
+    /**
+    DOM COMPATIBILITY
+    **/
+    		if (document.getElementById) {
+    			// if w3c method exists
+    		} else if(document.all) {
+    			// if the all[] array exists
+    		} else {
+    			// legacy DOM
+    		}
+	</script>
+
+	<!-- <input type="button" onclick="sayHello()" value="say hey"> -->
+</body>
+</html>

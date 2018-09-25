@@ -1,0 +1,31 @@
+body{
+	background-color: grey; 
+}
+
+.main-container{
+	width: inherit;
+	background-color: white;
+	height: 900px; 	
+}
+
+img{
+	height: inherit;
+	width: 50px;
+	position: sticky;
+	a
+}
+
+.main-container{
+}
+
+
+#inner-container{
+	width: inherit;
+	height: 100px;
+	background: yellow;
+	display: inline-block;
+}
+
+#inner1, #inner2, #inner3{
+	display: inline-block;
+}
