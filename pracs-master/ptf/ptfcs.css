@@ -1,0 +1,36 @@
+body{
+	background-color: #FFFFF0;
+	font-family: 'Courier', Palatino, Georgia, Paramond;
+	font-style: oblique;
+	font-size: 15px;
+}
+
+header{
+	background-color: black;
+	margin : 0px, auto;
+	padding: 10px;
+	text-align: center;
+	border-bottom: outset 5px white;
+}
+
+.nav-header-banner > #nav-header-details > a{
+	display: inline-block;
+	position: sticky;
+	color: white;
+	text-decoration: none;
+	/*text-align: justify;*/
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 0.8;
+	word-spacing: 10px;
+	width: 100px;
+	/*overflow: hidden;*/
+}
+
+#nav-header-details > a:hover, a:active{
+	color:  yellow;
+	padding: 10px 10px; /* gives it a box feel/raised*/
+	background-color: green;
+}
+
+
