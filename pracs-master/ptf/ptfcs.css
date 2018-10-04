@@ -33,4 +33,19 @@ header{
 	background-color: green;
 }
 
+.main-container{
+	background-color: grey;
+	margin-top: 200px;
+	margin-left: 100px;
+	margin-right: 100px;
+	opacity: 0.7;
+}
+
+.top-cont-holder{
+	display: -webkit-flex;
+}
+
+.top-cont-level{
+}
+
 
