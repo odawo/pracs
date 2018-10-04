@@ -5,6 +5,8 @@ body{
 	font-size: 15px;
 }
 
+/*navigation bar*/
+
 header{
 	background-color: black;
 	margin : 0px, auto;
@@ -30,8 +32,11 @@ header{
 #nav-header-details > a:hover, a:active{
 	color:  yellow;
 	padding: 10px 10px; /* gives it a box feel/raised*/
-	background-color: green;
+	background-color: white;
 }
+
+
+/*main container*/
 
 .main-container{
 	background-color: grey;
@@ -46,7 +51,51 @@ header{
 	width: 100%;
 }
 
-.top-cont-level{
+#top-cont-level{}
+
+.bottom-cont-holder{}
+
+#bottom-cont-carousel-holder{}
+
+
+/*about*/
+
+.about-section{}
+
+.about-developer{}
+
+#about-info{}
+
+#about-data{}
+
+
+/*portfolio images & links*/
+
+.portfolio{}
+
+.row{}
+
+.column{}
+
+
+/*footer*/
+
+footer{
+	background-color: black;
 }
+
+.footer-cont{}
+
+.quick-links{}
+
+.quotes{}
+
+.contacts{}
+
+
+
+
+
+
 
 
